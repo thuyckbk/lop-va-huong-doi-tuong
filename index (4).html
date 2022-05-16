@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Demo 01 </title>
+</head>
+<body>
+
+<h2> Lop va Huong doi tuong Dome01</h2>
+	<script src="person.js">
+	</script>
+	<script>
+		let quan = new person("quan",2000,"male","abc@gmail.com","0909000999","ho chi minh");
+		console.log(quan.getAge());
+		quan.name = "Nam";
+		console.log(quan.name);
+		for (const x in quan){
+			console.log(x +":"+quan[x]);
+		}
+		let myDataName = 'height';
+		let myDataValue = '1.75m';
+		person[myDataName] = myDataValue;
+		
+	</script>
+</body>
+</html>

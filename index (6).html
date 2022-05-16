@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-eqhiv="X-UA_Compartible" content="IE=egde">
+	<meta name="viewport" content="width=device, initial-scale=1.0">
+	<title> Bai tap Mo phong tuong tac giua 2 doi tuong: cong tac va bong den </title>
+</head>
+<body>
+
+	<script>
+	class ElectricLamp{
+		constructor(){}
+		turnOn(){
+			this.status = true;
+		}
+		turnOff(){
+			this.status = false;
+		}
+	}
+	class SwitchButton{
+		constructor(){}
+		connectToLamp(eletricLamp){
+			if (this.status){
+				if(electricLamp.status){
+					alert('Den sang ')
+				}else{
+					alert('Den chay or cong tac hong');
+				}
+			}else{
+				if(eletricLamp.status){
+					alert('Cong tac hong ')
+				}else{
+					alert('Den tat');
+				}
+			}
+		}
+		switchOn(){
+			this.status = true;
+		}
+		switchOff(){
+			this.status = false;
+		}
+	}
+	
+	let electricLamp = new ElectricLamp();
+	let switchButton = new SwitchButton();
+	switchButton.switchOff();
+	electricLamp.turnOff();
+	switchButton.connectToLamp(electricLamp);
+	console.log(electricLamp);
+	
+	switchButton.switchOn();
+	electricLamp.turnOff();
+	switchButton.connectToLamp(electricLamp);
+	switchButton.switchOff();
+	electricLamp.turnOn();
+	switchButton.connectToLamp(electricLamp);
+	switchButton.switchOn();
+	electricLamp.turnOn();
+	switchButton.connectToLamp(electricLamp);
+	</script>
+</body>
+</html>

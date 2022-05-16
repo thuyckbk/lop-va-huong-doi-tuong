@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành mô phỏng sư hoạt động của đèn Pin</title>
+</head>
+
+<body>
+    <script>
+        class Battery {
+            constructor() {
+                //= nul or =0
+                this.energy = 0;
+            }
+            setEnergy(energy) {
+                this.energy = energy;
+            }
+            getEnergy() {
+                return this.energy;
+            }
+            decreaseEnery() {
+                this.energy -=1;
+
+            }
+        }
+
+        class FlashLamp{
+            constructor(){
+
+            }
+            setBattery(battery){
+                this.battery = battery;
+            }
+            getBattery(){
+                return this.battery;
+            }
+            isLight(){
+                this.status ? "Lighting" : "turnOff";
+            }
+
+            turnOn(){
+                this.status = true;
+
+            }
+            turnOff(){
+                this.status= false;
+            }
+        }
+
+        let b = new Battery();
+        b.setEnergy(30);
+        console.log(b);
+
+        let ft = new FlashLamp();
+        ft.setBattery(b);
+        console.log(ft);
+
+        //ft.turnOff();
+
+        console.log(ft);
+
+        let arr = [1,2,3];
+        console.log(arr[3]);
+        arr.push(4);
+        console.log(arr[3]);
+    </script>
+</body>
+
+</html>
